@@ -1,0 +1,2 @@
+[build.environment]
+    REACT_APP_WEATHER_API_KEY="0e4f2219b99f733dcd46ea1971425e17"

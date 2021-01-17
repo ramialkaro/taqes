@@ -5,33 +5,7 @@ import WbSunnyIcon from "@material-ui/icons/WbSunny";
 import ExploreIcon from "@material-ui/icons/Explore";
 import getLocationWeather from "./getLocationWeather";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    backgroundColor: "#EEE5E9",
-    height: "100vh",
-    width: "100wh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  icon: {
-    display: "flex",
-    justifyContent: "center",
-    paddingTop: theme.spacing(5),
-    paddingBottom: theme.spacing(5),
-    height: 170,
-    width: 100,
-    color: "#2B303A",
-    fontSize: "50pt",
-  },
-  wrapper: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    margin: theme.spacing(3),
-  },
-}));
+
 
 function App() {
   const classes = useStyles();
@@ -95,7 +69,7 @@ function App() {
         <Grid item className={classes.wrapper}>
           <WbSunnyIcon className={classes.icon} />
           <Typography component="h3" variant="h5">
-            Weather {state.main.temp}
+            Weather data {state.main.temp}
           </Typography>
         </Grid>
         <Grid item className={classes.wrapper}>
@@ -110,3 +84,31 @@ function App() {
 }
 
 export default App;
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundColor: "#EEE5E9",
+    height: "100vh",
+    width: "100wh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  icon: {
+    display: "flex",
+    justifyContent: "center",
+    paddingTop: theme.spacing(5),
+    paddingBottom: theme.spacing(5),
+    height: 170,
+    width: 100,
+    color: "#2B303A",
+    fontSize: "50pt",
+  },
+  wrapper: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: theme.spacing(3),
+  },
+}));
